@@ -1,0 +1,10 @@
+{
+  "name": "pokelist-frontend",
+  "version": "1.0.0",
+  "description": "Pokemon collection tracker",
+  "main": "src/index.js",
+  "repository": "https://github.com/gerbot150/pokelist-frontend.git",
+  "author": "Greg Bateman <gerbot150@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
