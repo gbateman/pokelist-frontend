@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Header from './components/Header.jsx';
 
 import './sass/main.scss';
 
 ReactDOM.render(
-  <h1 className='header'>Hello World!</h1>,
+  <Header/>,
   document.getElementById('root')
 );
