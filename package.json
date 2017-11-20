@@ -9,10 +9,13 @@
   "private": false,
   "dependencies": {
     "babel-preset-react": "^6.24.1",
+    "express": "^4.16.2",
     "node-sass": "^4.6.1",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-redux": "^5.0.6"
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -23,6 +26,7 @@
     "webpack": "^3.8.1"
   },
   "scripts": {
+    "start": "yarn build && node src/app.js",
     "build": "webpack --config webpack.config.js && osascript -e 'display notification \"Build complete\" with title \"Yarn\"'"
   }
 }
