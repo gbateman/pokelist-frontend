@@ -3,7 +3,13 @@ import React from 'react';
 class Login extends React.Component {
   render() {
     return (
-      <p>Login</p>
+      <div className="container">
+        <div className="row">
+          <div className="xs-col-12">
+            <p>Login</p>
+          </div>
+        </div>
+      </div>
     );
   }
 }
