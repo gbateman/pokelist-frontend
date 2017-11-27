@@ -4,8 +4,7 @@ import Home from '../components/Home.jsx';
 
 const mapStateToProps = state => {
   return {
-    caught: state.caught,
-    notCaught: state.notCaught
+    stuff: state.aString
   };
 };
 

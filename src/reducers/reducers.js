@@ -1,6 +1,12 @@
 // import { combineReducers } from 'redux';
 
-function defaultReducer(state = {}, action) {
+function getInitialState() {
+  return {
+    aString: "asdfasdf"
+  };
+}
+
+function defaultReducer(state = getInitialState(), action) {
   switch(action.type) {
     default:
       return state;
