@@ -1,4 +1,5 @@
 import React from 'react';
+import PokemonListContainer from '../containers/PokemonListContainer.jsx';
 
 class Home extends React.Component {
   render() {
@@ -7,6 +8,7 @@ class Home extends React.Component {
         <div className="row">
           <div className="xs-col-12">
             <p>Home</p>
+            <PokemonListContainer />
           </div>
         </div>
       </div>

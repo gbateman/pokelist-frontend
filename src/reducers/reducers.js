@@ -1,20 +1,8 @@
-// import { combineReducers } from 'redux';
+import { combineReducers } from 'redux';
+import HomeReducer from './HomeReducer.js';
 
-function getInitialState() {
-  return {
-    aString: "asdfasdf"
-  };
-}
+const reducers = combineReducers({
+  home: HomeReducer
+});
 
-function defaultReducer(state = getInitialState(), action) {
-  switch(action.type) {
-    default:
-      return state;
-  }
-}
-
-// const reducers = combineReducers({
-//   defaultReducer
-// });
-
-export default defaultReducer;
+export default reducers;

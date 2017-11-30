@@ -4,7 +4,6 @@ import Home from '../components/Home.jsx';
 
 const mapStateToProps = state => {
   return {
-    stuff: state.aString
   };
 };
 
