@@ -1,3 +1,6 @@
+$bg-purple: MediumPurple;
+$bg-white: white;
+
 body {
     font-family: "Lato", sans-serif;
 }
@@ -12,4 +15,13 @@ body {
     a {
         color: inherit;
     }
+}
+
+.pokemon-list-item {
+    border: 2px solid black;
+    border-radius: 5px;
+    color: white;
+    background: linear-gradient(135deg, $bg-purple, $bg-white);
+    margin-bottom: 10px;
+    padding: 5px;
 }
