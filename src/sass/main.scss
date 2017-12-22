@@ -1,4 +1,6 @@
 $nav-purple: #548;
+@import './pokemon-icon.scss';
+
 $bg-purple: MediumPurple;
 $bg-white: white;
 
@@ -30,6 +32,11 @@ body {
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.pokemon-list-item-left-container {
+    display: flex;
     align-items: center;
 }
 

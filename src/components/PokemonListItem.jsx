@@ -1,5 +1,6 @@
 import React from 'react';
 import SiteLinks from './SiteLinks.jsx';
+import PokemonIcon from './PokemonIcon.jsx';
 
 class PokemonListItem extends React.Component {
   render() {
@@ -9,8 +10,8 @@ class PokemonListItem extends React.Component {
 
     return (
       <div className='pokemon-list-item'>
-        <div>
-          {image}
+        <div className='pokemon-list-item-left-container'>
+          <PokemonIcon pokemon={pokemon} />
           {pokemon.name}
         </div>
         <SiteLinks pokemon={pokemon} />
