@@ -6,7 +6,7 @@ class Header extends React.Component {
     return (
       <nav className="navbar pokelist-navbar">
         <div className="navbar-header">
-          <div className="navbar-brand">PokéList</div>
+          <Link to="/"><div className="navbar-brand">PokéList</div></Link>
           <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
