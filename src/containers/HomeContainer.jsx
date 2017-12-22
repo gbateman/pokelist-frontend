@@ -1,19 +1,16 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import Home from '../components/Home.jsx';
 
-const mapStateToProps = state => {
+function mapStateToProps(state) {
   return {
+    routes: state.home.routes
   };
-};
+}
 
-const mapDispatchToProps = dispatch => {
+function mapDispatchToProps(dispatch) {
   return {
-    okPokemonClick : id => {
-      dispatch(togglePokemon(id));
-    }
   };
-};
+}
 
 const HomeContainer = connect(
   mapStateToProps,

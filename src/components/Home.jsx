@@ -1,14 +1,15 @@
 import React from 'react';
-import PokemonListContainer from '../containers/PokemonListContainer.jsx';
+import RoutesList from './RoutesList.jsx';
 
 class Home extends React.Component {
   render() {
+    const { routes } = this.props;
     return (
       <div className='container'>
         <div className='row'>
           <div className='xs-col-12'>
             <div className='pokelist-page-header'>Home</div>
-            <PokemonListContainer />
+            <RoutesList routes={routes} />
           </div>
         </div>
       </div>
