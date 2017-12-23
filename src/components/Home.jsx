@@ -2,6 +2,10 @@ import React from 'react';
 import RoutesList from './RoutesList.jsx';
 
 class Home extends React.Component {
+  componentDidMount() {
+    this.props.fetchRoutes();
+  }
+
   render() {
     const { routes } = this.props;
     return (
