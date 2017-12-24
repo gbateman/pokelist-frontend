@@ -2,19 +2,19 @@ import Constants from '../constants/constants.js';
 
 function getInitialState() {
   return {
-    pokemon: []
+    pokemon: [],
+    routes: []
   };
 }
 
 function homeReducer(state = getInitialState(), action) {
+  console.log(action);
   switch(action.type) {
-    case Constants.HomeActions.REQUEST_POKEMON:
-      console.log("REQUEST_POKEMON");
+    case Constants.HomeActions.REQUEST_ROUTES:
       return state;
-    case Constants.HomeActions.RECEIVE_POKEMON:
-      console.log("RECEIVE_POKEMON");
+    case Constants.HomeActions.RECEIVE_ROUTES:
       return Object.assign({}, state, {
-        pokemon: action.pokemon
+        routes: action.routes
       });
     default:
       return state;
