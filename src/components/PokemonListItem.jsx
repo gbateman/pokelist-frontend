@@ -1,13 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SiteLinks from './SiteLinks.jsx';
 import PokemonIcon from './PokemonIcon.jsx';
 
 class PokemonListItem extends React.Component {
   render() {
     const { pokemon } = this.props;
-
-    const image = pokemon.image && <img src={pokemon.image} />;
-
     return (
       <div className='pokemon-list-item'>
         <div className='pokemon-list-item-left-container'>
@@ -19,5 +17,9 @@ class PokemonListItem extends React.Component {
     );
   }
 }
+
+PokemonListItem.propTypes = {
+  pokemon: PropTypes.object.isRequired
+};
 
 export default PokemonListItem;

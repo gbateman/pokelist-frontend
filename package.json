@@ -12,6 +12,7 @@
     "cross-fetch": "^1.1.1",
     "express": "^4.16.2",
     "node-sass": "^4.6.1",
+    "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-redux": "^5.0.6",
@@ -24,6 +25,8 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "css-loader": "^0.28.7",
+    "eslint": "^4.14.0",
+    "eslint-plugin-react": "^7.5.1",
     "file-loader": "^1.1.6",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
@@ -31,6 +34,7 @@
   },
   "scripts": {
     "start": "yarn build && node src/app.js",
-    "build": "webpack --config webpack.config.js && osascript -e 'display notification \"Build complete\" with title \"Yarn\"'"
+    "build": "webpack --config webpack.config.js && osascript -e 'display notification \"Build complete\" with title \"Yarn\"'",
+    "lint": "yarn run eslint --ext .js --ext .jsx src --fix"
   }
 }

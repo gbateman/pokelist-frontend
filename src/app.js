@@ -9,4 +9,4 @@ app.get('/', (req, res) => {
 
 const port = 3000;
 
-app.listen(port, () => console.log('Running frontend on port: ' + port));
+app.listen(port, () => console.log('Running frontend on port: ' + port)); // eslint-disable-line no-console

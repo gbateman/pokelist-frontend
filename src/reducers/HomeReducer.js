@@ -8,7 +8,6 @@ function getInitialState() {
 }
 
 function homeReducer(state = getInitialState(), action) {
-  console.log(action);
   switch(action.type) {
     case Constants.HomeActions.REQUEST_ROUTES:
       return state;

@@ -6,7 +6,7 @@ import Login from './Login.jsx';
 
 class App extends React.Component {
   componentDidMount() {
-    document.title = "PokéList";
+    document.title = 'PokéList';
   }
 
   render() {

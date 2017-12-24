@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import PokemonList from './PokemonList.jsx';
 
 class RoutesList extends React.Component {
@@ -12,5 +13,9 @@ class RoutesList extends React.Component {
     );
   }
 }
+
+RoutesList.propTypes = {
+  routes: PropTypes.object.isRequired
+};
 
 export default RoutesList;
