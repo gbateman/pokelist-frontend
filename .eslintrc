@@ -19,5 +19,9 @@
     "plugin:react/recommended"
   ],
   "rules": {
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "block-spacing": ["error", "always"],
+    "react/prop-types": ["warn"]
   }
 }

@@ -12,6 +12,7 @@
     "cross-fetch": "^1.1.1",
     "express": "^4.16.2",
     "node-sass": "^4.6.1",
+    "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-redux": "^5.0.6",
@@ -34,6 +35,6 @@
   "scripts": {
     "start": "yarn build && node src/app.js",
     "build": "webpack --config webpack.config.js && osascript -e 'display notification \"Build complete\" with title \"Yarn\"'",
-    "lint": "yarn run eslint src"
+    "lint": "yarn run eslint --ext .js --ext .jsx src --fix"
   }
 }
