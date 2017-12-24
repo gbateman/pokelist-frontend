@@ -12,7 +12,7 @@ class PokemonListItem extends React.Component {
       <div className='pokemon-list-item'>
         <div className='pokemon-list-item-left-container'>
           <PokemonIcon pokemon={pokemon} />
-          {pokemon.name}
+          <div className='pokemon-list-item-name'>{pokemon.name}</div>
         </div>
         <SiteLinks pokemon={pokemon} />
       </div>

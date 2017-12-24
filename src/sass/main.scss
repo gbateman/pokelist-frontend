@@ -26,6 +26,11 @@ body {
     margin-bottom: 10px;
 }
 
+.pokemon-list-item-left-container {
+    display: flex;
+    align-items: center;
+}
+
 .pokemon-list-item {
     color: white;
     background: linear-gradient(135deg, $bg-purple, $bg-white);
@@ -41,9 +46,8 @@ body {
     align-items: center;
 }
 
-.pokemon-list-item-left-container {
-    display: flex;
-    align-items: center;
+.pokemon-list-item-name {
+    margin-left: 5px;
 }
 
 .site-link {
