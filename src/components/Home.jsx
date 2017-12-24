@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import RoutesList from './RoutesList.jsx';
 
 class Home extends React.Component {
@@ -20,5 +21,10 @@ class Home extends React.Component {
     );
   }
 }
+
+Home.propTypes = {
+  fetchRoutes: PropTypes.function.isRequired,
+  routes: PropTypes.object
+};
 
 export default Home;
