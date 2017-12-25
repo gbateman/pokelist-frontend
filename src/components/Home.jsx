@@ -23,7 +23,7 @@ class Home extends React.Component {
 }
 
 Home.propTypes = {
-  fetchRoutes: PropTypes.function.isRequired,
+  fetchRoutes: PropTypes.func.isRequired,
   routes: PropTypes.object
 };
 
