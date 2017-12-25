@@ -6,14 +6,4 @@
     background-image: url('../images/pokesprite.png');
 }
 
-.pokemon-icon-656 {
-    background-position: -0px -1620px;
-}
-
-.pokemon-icon-657 {
-    background-position: -80px -1620px;
-}
-
-.pokemon-icon-658 {
-    background-position: -160px -1620px;
-}
+@import '../sass/pokemon-icons.scss';
