@@ -38,6 +38,8 @@ const mega = [
   376,
   380,
   381,
+  382,
+  383,
   384,
   428,
   445,
@@ -83,10 +85,75 @@ const cosplay = [
   'e',
   'f'
 ];
-
 const cosplayLR = [
   'a',
   'e'
+];
+
+const defaultUnknown = 'f';
+const unknownNumber = 201;
+const unknown = [
+  'a',
+  'b',
+  'c',
+  'd',
+  'e',
+  'excl',
+  'f',
+  'g',
+  'h',
+  'i',
+  'j',
+  'k',
+  'l',
+  'm',
+  'n',
+  'o',
+  'p',
+  'q',
+  'r',
+  'ques',
+  's',
+  't',
+  'u',
+  'v',
+  'w',
+  'x',
+  'y',
+  'z'
+];
+
+const unknownLR = [
+  'b',
+  'c',
+  'd',
+  'e',
+  'f',
+  'g',
+  'h',
+  'j',
+  'k',
+  'l',
+  'm',
+  'n',
+  'p',
+  'q',
+  'ques',
+  'r',
+  's',
+  't',
+  'v',
+  'z'
+];
+
+const castformNumber = 351;
+const castform = [
+  'a',
+  'b',
+  'c'
+];
+const castformLR = [
+  'b'
 ];
 
 const lr = [
@@ -96,7 +163,18 @@ const lr = [
   40,
   61,
   62,
-  99
+  99,
+  159,
+  173,
+  174,
+  186,
+  215,
+  216,
+  315,
+  335,
+  336,
+  359,
+  377
 ];
 
 function addCosplays(i) {
@@ -112,31 +190,77 @@ function addCosplays(i) {
   });
 }
 
+function addUnknown(i) {
+  unknown.forEach((unknown) => {
+    if (unknown === defaultUnknown) {
+      spriteList.push(padToThree(i));
+      spriteList.push(padToThree(i) + '-r');
+      spriteList.push(padToThree(i) + '-shiny');
+      spriteList.push(padToThree(i) + '-r-shiny');
+      return;
+    }
+    spriteList.push(padToThree(i) + '-' + unknown);
+    if (unknownLR.includes(unknown)) {
+      spriteList.push(padToThree(i) + '-' + unknown + '-r');
+    }
+    spriteList.push(padToThree(i) + '-' + unknown + '-shiny');
+    if (unknownLR.includes(unknown)) {
+      spriteList.push(padToThree(i) + '-' + unknown + '-r-shiny');
+    }
+  });
+}
+
+function addCastform(i) {
+  castform.forEach((castform) => {
+    spriteList.push(padToThree(i) + '-' + castform);
+    if (castformLR.includes(castform)) {
+      spriteList.push(padToThree(i) + '-' + castform + '-r');
+    }
+    spriteList.push(padToThree(i) + '-' + castform + '-shiny');
+    if (castformLR.includes(castform)) {
+      spriteList.push(padToThree(i) + '-' + castform + '-r-shiny');
+    }
+  });
+}
+
 for(let i = 1; i <= 806; i++) {
-  spriteList.push(padToThree(i));
-  if (lr.includes(i)) {
-    spriteList.push(padToThree(i) + '-r');
-  }
-  spriteList.push(padToThree(i) + '-shiny');
-  if (lr.includes(i)) {
-    spriteList.push(padToThree(i) + '-r-shiny');
-  }
-  if (i === cosplayNumber) {
-    addCosplays(i);
-  }
-  if (mega.includes(i)) {
-    spriteList.push(padToThree(i) + '-mega');
-    spriteList.push(padToThree(i) + '-mega-shiny');
-  }
-  if (megaXY.includes(i)) {
-    spriteList.push(padToThree(i) + '-mega-x');
-    spriteList.push(padToThree(i) + '-mega-x-shiny');
-    spriteList.push(padToThree(i) + '-mega-y');
-    spriteList.push(padToThree(i) + '-mega-y-shiny');
-  }
-  if (alolan.includes(i)) {
-    spriteList.push(padToThree(i) + '-alolan');
-    spriteList.push(padToThree(i) + '-alolan-shiny');
+  if (i === unknownNumber) {
+    addUnknown(i);
+  } else {
+    spriteList.push(padToThree(i));
+    if (lr.includes(i)) {
+      spriteList.push(padToThree(i) + '-r');
+    }
+    spriteList.push(padToThree(i) + '-shiny');
+    if (lr.includes(i)) {
+      spriteList.push(padToThree(i) + '-r-shiny');
+    }
+    if (i === cosplayNumber) {
+      addCosplays(i);
+    }
+    if (i === castformNumber) {
+      addCastform(i);
+    }
+    if (mega.includes(i)) {
+      spriteList.push(padToThree(i) + '-mega');
+      if (lr.includes(i)) {
+        spriteList.push(padToThree(i) + '-mega-r');
+      }
+      spriteList.push(padToThree(i) + '-mega-shiny');
+      if (lr.includes(i)) {
+        spriteList.push(padToThree(i) + '-mega-r-shiny');
+      }
+    }
+    if (megaXY.includes(i)) {
+      spriteList.push(padToThree(i) + '-mega-x');
+      spriteList.push(padToThree(i) + '-mega-x-shiny');
+      spriteList.push(padToThree(i) + '-mega-y');
+      spriteList.push(padToThree(i) + '-mega-y-shiny');
+    }
+    if (alolan.includes(i)) {
+      spriteList.push(padToThree(i) + '-alolan');
+      spriteList.push(padToThree(i) + '-alolan-shiny');
+    }
   }
 }
 
