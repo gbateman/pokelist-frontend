@@ -60,6 +60,12 @@ const wormadamForms = [
 ];
 const wormadamFormsLR = [];
 
+const cherrimNumber = 421;
+const cherrimForms = [
+  'a'
+];
+const cherrimFormsLR = [];
+
 const shellosNumber = 422;
 const shellosForms = [
   'a'
@@ -138,6 +144,9 @@ for(let i = 1; i <= 806; i++) {
         break;
       case wormadamNumber:
         addForms(i, wormadamForms, wormadamFormsLR);
+        break;
+      case cherrimNumber:
+        addForms(i, cherrimForms, cherrimFormsLR);
         break;
       case shellosNumber:
         addForms(i, shellosForms, shellosFormsLR);
