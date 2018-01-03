@@ -60,6 +60,18 @@ const wormadamForms = [
 ];
 const wormadamFormsLR = [];
 
+const shellosNumber = 422;
+const shellosForms = [
+  'a'
+];
+const shellosFormsLR = [];
+
+const gastrodonNumber = 423;
+const gastrodonForms = [
+  'a'
+];
+const gastrodonFormsLR = [];
+
 const lr = [
   35, 36, 39, 40, 61, 62, 99, 159, 173, 174, 186, 215, 216, 315, 335, 336, 359,
   377, 389, 406, 407
@@ -112,6 +124,12 @@ for(let i = 1; i <= 806; i++) {
         break;
       case wormadamNumber:
         addForms(i, wormadamForms, wormadamFormsLR);
+        break;
+      case shellosNumber:
+        addForms(i, shellosForms, shellosFormsLR);
+        break;
+      case gastrodonNumber:
+        addForms(i, gastrodonForms, gastrodonFormsLR);
         break;
       default:
         break;
