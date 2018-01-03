@@ -101,6 +101,24 @@ const forms = {
       'a'
     ]
   },
+  '521': {
+    forms: [
+      'a'
+    ],
+    formsLR: []
+  },
+  '550': {
+    forms: [
+      'a'
+    ],
+    formsLR: []
+  },
+  '555': {
+    forms: [
+      'a'
+    ],
+    formsLR: []
+  },
   '585': {
     forms: [
       'a', 'b', 'c'
@@ -110,6 +128,58 @@ const forms = {
   '586': {
     forms: [
       'a', 'b', 'c'
+    ],
+    formsLR: []
+  },
+  '592': {
+    forms: [
+      'a'
+    ],
+    formsLR: []
+  },
+  '593': {
+    forms: [
+      'a'
+    ],
+    formsLR: []
+  },
+  '641': {
+    forms: [
+      'a'
+    ],
+    formsLR: []
+  },
+  '642': {
+    forms: [
+      'a'
+    ],
+    formsLR: []
+  },
+  '645': {
+    forms: [
+      'a'
+    ],
+    formsLR: []
+  },
+  '646': {
+    forms: [
+      'a', 'b'
+    ],
+    formsLR: [
+      'a', 'b'
+    ]
+  },
+  '647': {
+    forms: [
+      'a'
+    ],
+    formsLR: [
+      'a'
+    ]
+  },
+  '648': {
+    forms: [
+      'a'
     ],
     formsLR: []
   },
