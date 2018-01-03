@@ -42,6 +42,12 @@ const castformLR = [
   'b'
 ];
 
+const deoxysNumber = 386;
+const deoxysForms = [
+  'a', 'b', 'c'
+];
+const deoxysFormsLR = [];
+
 const lr = [
   35, 36, 39, 40, 61, 62, 99, 159, 173, 174, 186, 215, 216, 315, 335, 336, 359, 377
 ];
@@ -78,11 +84,18 @@ for(let i = 1; i <= 806; i++) {
     addUnknown(i);
   } else {
     addVariants(padToThree(i), lr.includes(i));
-    if (i === cosplayNumber) {
-      addForms(i, cosplay, cosplayLR);
-    }
-    if (i === castformNumber) {
-      addForms(i, castform, castformLR);
+    switch(i) {
+      case cosplayNumber:
+        addForms(i, cosplay, cosplayLR);
+        break;
+      case castformNumber:
+        addForms(i, castform, castformLR);
+        break;
+      case deoxysNumber:
+        addForms(i, deoxysForms, deoxysFormsLR);
+        break;
+      default:
+        break;
     }
     if (mega.includes(i)) {
       addVariants(padToThree(i) + '-mega', lr.includes(i));
