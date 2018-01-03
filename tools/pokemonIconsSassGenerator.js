@@ -100,9 +100,22 @@ const shayminFormsLR = [
   'a'
 ];
 
+const deerlingNumber = 585;
+const deerlingForms = [
+  'a', 'b', 'c'
+];
+const deerlingFormsLR = [];
+
+const sawsbuckNumber = 586;
+const sawsbuckForms = [
+  'a', 'b', 'c'
+];
+const sawsbuckFormsLR = [];
+
 const lr = [
   35, 36, 39, 40, 61, 62, 99, 159, 173, 174, 186, 215, 216, 315, 335, 336, 359,
-  377, 389, 406, 407, 467, 468
+  377, 389, 406, 407, 467, 468, 500, 513, 514, 529, 530, 539, 549, 569, 577,
+  584, 591, 599, 600, 601, 607, 622, 623, 646, 648
 ];
 
 function addVariants(baseString, isLR) {
@@ -170,6 +183,12 @@ for(let i = 1; i <= 806; i++) {
         break;
       case shayminNumber:
         addForms(i, shayminForms, shayminFormsLR);
+        break;
+      case deerlingNumber:
+        addForms(i, deerlingForms, deerlingFormsLR);
+        break;
+      case sawsbuckNumber:
+        addForms(i, sawsbuckForms, sawsbuckFormsLR);
         break;
       default:
         break;
