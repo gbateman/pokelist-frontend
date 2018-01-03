@@ -48,8 +48,21 @@ const deoxysForms = [
 ];
 const deoxysFormsLR = [];
 
+const burmyNumber = 412;
+const burmyForms = [
+  'a', 'b'
+];
+const burmyFormsLR = [];
+
+const wormadamNumber = 413;
+const wormadamForms = [
+  'a', 'b'
+];
+const wormadamFormsLR = [];
+
 const lr = [
-  35, 36, 39, 40, 61, 62, 99, 159, 173, 174, 186, 215, 216, 315, 335, 336, 359, 377
+  35, 36, 39, 40, 61, 62, 99, 159, 173, 174, 186, 215, 216, 315, 335, 336, 359,
+  377, 389, 406, 407
 ];
 
 function addVariants(baseString, isLR) {
@@ -93,6 +106,12 @@ for(let i = 1; i <= 806; i++) {
         break;
       case deoxysNumber:
         addForms(i, deoxysForms, deoxysFormsLR);
+        break;
+      case burmyNumber:
+        addForms(i, burmyForms, burmyFormsLR);
+        break;
+      case wormadamNumber:
+        addForms(i, wormadamForms, wormadamFormsLR);
         break;
       default:
         break;
