@@ -57,9 +57,9 @@ function addVariants(baseString, isLR) {
     }
 }
 
-function addCosplays(i) {
-  cosplay.forEach((cosplay) => {
-    addVariants(padToThree(i) + '-cosplay-' + cosplay, cosplayLR.includes(cosplay));
+function addForms(i, forms, formsLR) {
+  forms.forEach((form) => {
+    addVariants(padToThree(i) + '-' + form, formsLR.includes(form));
   });
 }
 
@@ -73,22 +73,16 @@ function addUnknown(i) {
   });
 }
 
-function addCastform(i) {
-  castform.forEach((castform) => {
-    addVariants(padToThree(i) + '-' + castform, castformLR.includes(castform));
-  });
-}
-
 for(let i = 1; i <= 806; i++) {
   if (i === unknownNumber) {
     addUnknown(i);
   } else {
     addVariants(padToThree(i), lr.includes(i));
     if (i === cosplayNumber) {
-      addCosplays(i);
+      addForms(i, cosplay, cosplayLR);
     }
     if (i === castformNumber) {
-      addCastform(i);
+      addForms(i, castform, castformLR);
     }
     if (mega.includes(i)) {
       addVariants(padToThree(i) + '-mega', lr.includes(i));
