@@ -80,6 +80,12 @@ const rotomFormsLR = [
   'e'
 ];
 
+const giratinaNumber = 487;
+const giratinaForms = [
+  'a'
+];
+const giratinaFormsLR = [];
+
 const lr = [
   35, 36, 39, 40, 61, 62, 99, 159, 173, 174, 186, 215, 216, 315, 335, 336, 359,
   377, 389, 406, 407, 467, 468
@@ -141,6 +147,9 @@ for(let i = 1; i <= 806; i++) {
         break;
       case rotomNumber:
         addForms(i, rotomForms, rotomFormsLR);
+        break;
+      case giratinaNumber:
+        addForms(i, giratinaForms, giratinaFormsLR);
         break;
       default:
         break;
