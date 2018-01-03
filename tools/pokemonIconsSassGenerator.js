@@ -72,9 +72,17 @@ const gastrodonForms = [
 ];
 const gastrodonFormsLR = [];
 
+const rotomNumber = 479;
+const rotomForms = [
+  'a', 'b', 'c', 'd', 'e'
+];
+const rotomFormsLR = [
+  'e'
+];
+
 const lr = [
   35, 36, 39, 40, 61, 62, 99, 159, 173, 174, 186, 215, 216, 315, 335, 336, 359,
-  377, 389, 406, 407
+  377, 389, 406, 407, 467, 468
 ];
 
 function addVariants(baseString, isLR) {
@@ -130,6 +138,9 @@ for(let i = 1; i <= 806; i++) {
         break;
       case gastrodonNumber:
         addForms(i, gastrodonForms, gastrodonFormsLR);
+        break;
+      case rotomNumber:
+        addForms(i, rotomForms, rotomFormsLR);
         break;
       default:
         break;
