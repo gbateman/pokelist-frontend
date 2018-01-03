@@ -15,14 +15,6 @@ const alolan = [
   19, 20, 26, 27, 28, 37, 38, 50, 51, 52, 53, 74, 75, 76, 88, 89, 103, 105
 ];
 
-const cosplayNumber = 25;
-const cosplay = [
-  'a', 'b', 'c', 'd', 'e', 'f'
-];
-const cosplayLR = [
-  'a', 'e'
-];
-
 const defaultUnknown = 'f';
 const unknownNumber = 201;
 const unknown = [
@@ -34,83 +26,94 @@ const unknownLR = [
   'r', 's', 't', 'v', 'z'
 ];
 
-const castformNumber = 351;
-const castform = [
-  'a', 'b', 'c'
-];
-const castformLR = [
-  'b'
-];
-
-const deoxysNumber = 386;
-const deoxysForms = [
-  'a', 'b', 'c'
-];
-const deoxysFormsLR = [];
-
-const burmyNumber = 412;
-const burmyForms = [
-  'a', 'b'
-];
-const burmyFormsLR = [];
-
-const wormadamNumber = 413;
-const wormadamForms = [
-  'a', 'b'
-];
-const wormadamFormsLR = [];
-
-const cherrimNumber = 421;
-const cherrimForms = [
-  'a'
-];
-const cherrimFormsLR = [];
-
-const shellosNumber = 422;
-const shellosForms = [
-  'a'
-];
-const shellosFormsLR = [];
-
-const gastrodonNumber = 423;
-const gastrodonForms = [
-  'a'
-];
-const gastrodonFormsLR = [];
-
-const rotomNumber = 479;
-const rotomForms = [
-  'a', 'b', 'c', 'd', 'e'
-];
-const rotomFormsLR = [
-  'e'
-];
-
-const giratinaNumber = 487;
-const giratinaForms = [
-  'a'
-];
-const giratinaFormsLR = [];
-
-const shayminNumber = 492;
-const shayminForms = [
-  'a'
-];
-const shayminFormsLR = [
-  'a'
-];
-
-const deerlingNumber = 585;
-const deerlingForms = [
-  'a', 'b', 'c'
-];
-const deerlingFormsLR = [];
-
-const sawsbuckNumber = 586;
-const sawsbuckForms = [
-  'a', 'b', 'c'
-];
-const sawsbuckFormsLR = [];
+const forms = {
+  '25': {
+    forms: [
+      'a', 'b', 'c', 'd', 'e', 'f'
+    ],
+    formsLR: [
+      'a', 'e'
+    ]
+  },
+  '351': {
+    forms: [
+      'a', 'b', 'c'
+    ],
+    formsLR: [
+      'b'
+    ]
+  },
+  '386': {
+    forms: [
+      'a', 'b', 'c'
+    ],
+    formsLR: []
+  },
+  '412': {
+    forms: [
+      'a', 'b'
+    ],
+    formsLR: []
+  },
+  '413': {
+    forms: [
+      'a', 'b'
+    ],
+    formsLR: []
+  },
+  '421': {
+    forms: [
+      'a'
+    ],
+    formsLR: []
+  },
+  '422': {
+    forms: [
+      'a'
+    ],
+    formsLR: []
+  },
+  '423': {
+    forms: [
+      'a'
+    ],
+    formsLR: []
+  },
+  '479': {
+    forms: [
+      'a', 'b', 'c', 'd', 'e'
+    ],
+    formsLR: [
+      'e'
+    ]
+  },
+  '487': {
+    forms: [
+      'a'
+    ],
+    formsLR: []
+  },
+  '492': {
+    forms: [
+      'a'
+    ],
+    formsLR: [
+      'a'
+    ]
+  },
+  '585': {
+    forms: [
+      'a', 'b', 'c'
+    ],
+    formsLR: []
+  },
+  '586': {
+    forms: [
+      'a', 'b', 'c'
+    ],
+    formsLR: []
+  },
+};
 
 const lr = [
   35, 36, 39, 40, 61, 62, 99, 159, 173, 174, 186, 215, 216, 315, 335, 336, 359,
@@ -119,14 +122,14 @@ const lr = [
 ];
 
 function addVariants(baseString, isLR) {
-    spriteList.push(baseString);
-    if (isLR) {
-      spriteList.push(baseString + '-r');
-    }
-    spriteList.push(baseString + '-shiny');
-    if (isLR) {
-      spriteList.push(baseString + '-r-shiny');
-    }
+  spriteList.push(baseString);
+  if (isLR) {
+    spriteList.push(baseString + '-r');
+  }
+  spriteList.push(baseString + '-shiny');
+  if (isLR) {
+    spriteList.push(baseString + '-r-shiny');
+  }
 }
 
 function addForms(i, forms, formsLR) {
@@ -150,48 +153,8 @@ for(let i = 1; i <= 806; i++) {
     addUnknown(i);
   } else {
     addVariants(padToThree(i), lr.includes(i));
-    switch(i) {
-      case cosplayNumber:
-        addForms(i, cosplay, cosplayLR);
-        break;
-      case castformNumber:
-        addForms(i, castform, castformLR);
-        break;
-      case deoxysNumber:
-        addForms(i, deoxysForms, deoxysFormsLR);
-        break;
-      case burmyNumber:
-        addForms(i, burmyForms, burmyFormsLR);
-        break;
-      case wormadamNumber:
-        addForms(i, wormadamForms, wormadamFormsLR);
-        break;
-      case cherrimNumber:
-        addForms(i, cherrimForms, cherrimFormsLR);
-        break;
-      case shellosNumber:
-        addForms(i, shellosForms, shellosFormsLR);
-        break;
-      case gastrodonNumber:
-        addForms(i, gastrodonForms, gastrodonFormsLR);
-        break;
-      case rotomNumber:
-        addForms(i, rotomForms, rotomFormsLR);
-        break;
-      case giratinaNumber:
-        addForms(i, giratinaForms, giratinaFormsLR);
-        break;
-      case shayminNumber:
-        addForms(i, shayminForms, shayminFormsLR);
-        break;
-      case deerlingNumber:
-        addForms(i, deerlingForms, deerlingFormsLR);
-        break;
-      case sawsbuckNumber:
-        addForms(i, sawsbuckForms, sawsbuckFormsLR);
-        break;
-      default:
-        break;
+    if (forms[i]) {
+      addForms(i, forms[i].forms, forms[i].formsLR);
     }
     if (mega.includes(i)) {
       addVariants(padToThree(i) + '-mega', lr.includes(i));
