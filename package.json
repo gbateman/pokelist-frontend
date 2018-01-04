@@ -34,7 +34,7 @@
   },
   "scripts": {
     "start": "yarn build && node src/app.js",
-    "build": "webpack --config webpack.config.js && osascript -e 'display notification \"Build complete\" with title \"Yarn\"'",
+    "build": "webpack --config webpack.config.js && cp src/favicon.ico build/public/favicon.ico && osascript -e 'display notification \"Build complete\" with title \"Yarn\"'",
     "lint": "yarn run eslint --ext .js --ext .jsx src --fix",
     "spritelist": "node tools/pokemonIconsSassGenerator.js > src/sass/pokemon-icons.scss"
   }
