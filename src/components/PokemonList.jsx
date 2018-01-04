@@ -12,7 +12,7 @@ class PokemonList extends React.Component {
 }
 
 PokemonList.propTypes = {
-  pokemon: PropTypes.object.isRequired
+  pokemon: PropTypes.array.isRequired
 };
 
 export default PokemonList;
