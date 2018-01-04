@@ -15,7 +15,7 @@ class RoutesList extends React.Component {
 }
 
 RoutesList.propTypes = {
-  routes: PropTypes.object.isRequired
+  routes: PropTypes.array.isRequired
 };
 
 export default RoutesList;

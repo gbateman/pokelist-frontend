@@ -24,7 +24,7 @@ class Home extends React.Component {
 
 Home.propTypes = {
   fetchRoutes: PropTypes.func.isRequired,
-  routes: PropTypes.object
+  routes: PropTypes.array
 };
 
 export default Home;
