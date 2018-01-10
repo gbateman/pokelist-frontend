@@ -21,7 +21,10 @@
   "rules": {
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
-    "block-spacing": ["error", "always"],
+    "object-curly-spacing": ["error", "always", {
+      "arraysInObjects": false,
+      "objectsInObjects": false
+    }],
     "react/prop-types": ["warn"]
   }
 }
