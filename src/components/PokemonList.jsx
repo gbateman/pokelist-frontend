@@ -5,8 +5,12 @@ import PokemonListItem from './PokemonListItem.jsx';
 class PokemonList extends React.Component {
   render() {
     const { pokemon } = this.props;
-    return pokemon.map(aPokemon =>
-      <PokemonListItem key={aPokemon.name} pokemon={aPokemon} />
+    return (
+      <div className='pokemon-list'>
+        {pokemon.map(aPokemon =>
+          <PokemonListItem key={aPokemon.name} pokemon={aPokemon} />
+        )}
+      </div>
     );
   }
 }

@@ -28,3 +28,15 @@ export function fetchRoutes() {
       );
   };
 }
+
+export function closeMyTeam() {
+  return {
+    type: Constants.HomeActions.CLOSE_MY_TEAM
+  };
+}
+
+export function openMyTeam() {
+  return {
+    type: Constants.HomeActions.OPEN_MY_TEAM
+  };
+}
