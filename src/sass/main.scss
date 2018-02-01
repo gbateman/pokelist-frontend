@@ -86,9 +86,11 @@ body {
     z-index: 1;
     background: $my-team-gray;
     transition: all 0.2s;
+    visibility: hidden;
     width: 0;
 
     &.visible {
+        visibility: visible;
         width: 25%;
         padding: 0px 10px;
     }
